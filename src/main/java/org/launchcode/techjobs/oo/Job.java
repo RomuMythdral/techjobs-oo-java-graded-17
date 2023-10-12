@@ -78,6 +78,31 @@ public class Job {
     }
 
     @Override
+    public String toString() {
+        String noDataString = "Data not available";
+        if (getName() == null && getCoreCompetency() == null && getPositionType() == null && getLocation() == null && getEmployer() == null){
+            return "OOPS! This job does not seem to exist.";
+        }
+        if (this.name.isEmpty()) {
+            setName(noDataString);
+        }
+        if (this.employer.toString().isEmpty()) {
+            setEmployer(new Employer(noDataString));
+        }
+        if (this.location.toString().isEmpty()) {
+            setLocation(new Location(noDataString));
+        }
+        if (this.positionType.toString().isEmpty()) {
+            setPositionType(new PositionType(noDataString));
+        }
+        if (this.coreCompetency.toString().isEmpty()) {
+            setCoreCompetency(new CoreCompetency(noDataString));
+        }
+      String solution = System.lineSeparator() + "ID: " + getId() + "\n" + "Name: " + getName() + "\n" + "Employer: " + getEmployer() + "\n" + "Location: " + getLocation() + "\n" + "Position Type: " + getPositionType() + "\n" + "Core Competency: " + getCoreCompetency() + System.lineSeparator();
+      return solution;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
