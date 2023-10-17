@@ -98,7 +98,7 @@ public class Job {
         if (this.coreCompetency.toString().isEmpty()) {
             setCoreCompetency(new CoreCompetency(noDataString));
         }
-      String solution = System.lineSeparator() + "ID: " + getId() + "\n" + "Name: " + getName() + "\n" + "Employer: " + getEmployer() + "\n" + "Location: " + getLocation() + "\n" + "Position Type: " + getPositionType() + "\n" + "Core Competency: " + getCoreCompetency() + System.lineSeparator();
+      String solution = System.lineSeparator() + " ID: " + getId() + "\r\n" + " Name: " + getName() + "\r\n" + " Employer: " + getEmployer() + "\r\n" + " Location: " + getLocation() + "\r\n" + " Position Type: " + getPositionType() + "\r\n" + " Core Competency: " + getCoreCompetency() + System.lineSeparator();
       return solution;
     }
 

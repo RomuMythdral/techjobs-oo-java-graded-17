@@ -62,7 +62,7 @@ public class TestTaskFive extends AbstractTest {
     }
 
     @Test
-    public void testTestToString.HandlesEmptyFieldExists () throws ClassNotFoundException {
+    public void testTestToStringHandlesEmptyFieldExists () throws ClassNotFoundException {
         Class jobTestClass = getClassByName("JobTest");
         Method testToStringHandlesEmptyField = null;
 
